@@ -168,6 +168,8 @@
 
     editor = monaco.editor.create(document.getElementById('container'), {
         value: '-- MiraXSploit V2 --',
+	ShowError : true,
+	hoverMessage: true,
 	validate: false,
         language: 'lua',
         theme: "Dark",
@@ -175,16 +177,16 @@
         dragAndDrop: true,
         links: true,
         minimap: {
-        enabled: true,
-        renderCharacters: true,
-        maxColumn: 80,
-        scale: 2
+        enabled: true,                     // Enable the minimap
+        renderCharacters: true,           // Disable character rendering (useful if you want a simplified 	minimap)
+        maxColumn: 80,                   // Limit the number of columns displayed in the minimap (default: 120)
+        scale: 2                          // Change the scale of the minimap (1 is default, 1.5 makes it bigger)
     	},
         showFoldingControls: "always",
         smoothScrolling: true,
         stopRenderingLineAfter: 6500,
 	fontFamily: 'Cascadia Code',
-        fontSize: 14, // Default font size
+        fontSize: 13, // Default font size
         cursorBlinking: "smooth",
         cursorSmoothCaretAnimation: true,
         foldingHighlight: false,
